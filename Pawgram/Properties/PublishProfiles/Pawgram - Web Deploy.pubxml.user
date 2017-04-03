@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT0PsjTscxUajiXGCE+fjcAAAAAACAAAAAAADZgAAwAAAABAAAAClZOeKaUJK4FPjkWQ6H69RAAAAAASAAACgAAAAEAAAAALYxaeiE1n2tcF14dlnkdGAAAAACf4KfLnwfOjH8Zojb9Zu7cBGzHsKDRPJtbYcDHoTils8CxceXAabHlKplmsDeo+FEDe6b+DZeg9HP5YZsK4rHomblVvN7sMGP7wFMFzFZJOCUa3l2Q8b8SyyRVBC06PUOodRwWGPAgEVsrUS/qFIhhOr6LUfx2CYJJNvrCpe22cUAAAA0+Ciqg7bLizrms8RTKyZlhAbtac=</EncryptedPassword>
+    <_NewBackgroundProfile>False</_NewBackgroundProfile>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:pawgram-db-server.database.windows.net,1433;Initial Catalog=Pawgram_db;User Id=saltmin@pawgram-db-server;Password=N33dsMorePepper</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Pawgram.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:pawgram-db-server.database.windows.net,1433;Initial Catalog=Pawgram_db;User Id=saltmin@pawgram-db-server;Password=N33dsMorePepper</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
