@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Pawgram.Data;
 using Pawgram.Models;
 using Pawgram.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Pawgram
 {
@@ -47,7 +48,11 @@ namespace Pawgram
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.SslPort = 44342;
+                options.Filters.Add(new RequireHttpsAttribute());
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
