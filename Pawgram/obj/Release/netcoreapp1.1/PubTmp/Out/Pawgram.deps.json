@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "f5a769d6d72bde1050ad6351b3ab7846e0d508c4"
+    "signature": "c98bccaa76b4655c16e7458eaf2462a8eab17d4c"
   },
   "compilationOptions": {
     "defines": [
@@ -23,6 +23,7 @@
     ".NETCoreApp,Version=v1.1": {
       "pawgram/1.0.0": {
         "dependencies": {
+          "AspNet.Security.OAuth.Twitch": "1.0.0-beta3-final",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.1",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.1.1",
@@ -43,6 +44,17 @@
         },
         "compile": {
           "Pawgram.dll": {}
+        }
+      },
+      "aspnet.security.oauth.twitch/1.0.0-beta3-final": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.dll": {}
         }
       },
       "microsoft.applicationinsights/2.2.0": {
@@ -3370,6 +3382,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "aspnet.security.oauth.twitch/1.0.0-beta3-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hQuO0Jo9dPrJiWhX2z+MK/2GilA2TpuJmoMttHae3VgF+qJiewJthHq/FGDyQ+dm/pQxowieF2hF9Z0HyhR1WQ==",
+      "path": "aspnet.security.oauth.twitch/1.0.0-beta3-final",
+      "hashPath": "aspnet.security.oauth.twitch.1.0.0-beta3-final.nupkg.sha512"
     },
     "microsoft.applicationinsights/2.2.0": {
       "type": "package",

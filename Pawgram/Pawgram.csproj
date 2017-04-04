@@ -12,6 +12,7 @@
     <UserSecretsId>aspnet-Pawgram-68145f46-cf9f-412e-beb5-7be4e3dd7636</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AspNet.Security.OAuth.Twitch" Version="1.0.0-beta3-final" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.1" />

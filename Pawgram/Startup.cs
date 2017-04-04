@@ -91,6 +91,11 @@ namespace Pawgram
                 ClientId = Configuration["Authentication:Google:ClientId"],
                 ClientSecret = Configuration["Authentication:Google:ClientSecret"]
             });
+            app.UseTwitchAuthentication(new AspNet.Security.OAuth.Twitch.TwitchAuthenticationOptions()
+            {
+                ClientId = Configuration["Authentication:Twitch:ClientId"],
+                ClientSecret = Configuration["Authentication:Twitch:ClientSecret"]
+            });
 
             app.UseMvc(routes =>
             {

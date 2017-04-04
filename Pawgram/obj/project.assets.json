@@ -2,6 +2,18 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "AspNet.Security.OAuth.Twitch/1.0.0-beta3-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -4298,6 +4310,19 @@
     }
   },
   "libraries": {
+    "AspNet.Security.OAuth.Twitch/1.0.0-beta3-final": {
+      "sha512": "hQuO0Jo9dPrJiWhX2z+MK/2GilA2TpuJmoMttHae3VgF+qJiewJthHq/FGDyQ+dm/pQxowieF2hF9Z0HyhR1WQ==",
+      "type": "package",
+      "path": "aspnet.security.oauth.twitch/1.0.0-beta3-final",
+      "files": [
+        "aspnet.security.oauth.twitch.1.0.0-beta3-final.nupkg.sha512",
+        "aspnet.security.oauth.twitch.nuspec",
+        "lib/net451/AspNet.Security.OAuth.Twitch.dll",
+        "lib/net451/AspNet.Security.OAuth.Twitch.xml",
+        "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.dll",
+        "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.xml"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
@@ -11057,6 +11082,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "AspNet.Security.OAuth.Twitch >= 1.0.0-beta3-final",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.0.0",
       "Microsoft.AspNetCore >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.1.1",
@@ -11172,6 +11198,10 @@
           "Microsoft.ApplicationInsights.AspNetCore": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "AspNet.Security.OAuth.Twitch": {
+            "target": "Package",
+            "version": "1.0.0-beta3-final"
           },
           "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
