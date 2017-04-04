@@ -112,7 +112,10 @@ namespace Pawgram.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                //@TODO: Find better way of aquiring user name, pref during signup i.e. extend registration form
+                string userName = model.Email;                          //Default to full email
+                userName = model.Email.Split('@').FirstOrDefault();     //Scrub domain
+                var user = new ApplicationUser { UserName = userName, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

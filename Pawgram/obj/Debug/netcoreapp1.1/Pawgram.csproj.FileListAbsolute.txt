@@ -3,8 +3,8 @@ C:\Users\AndersBl\Code\Pawgram\Pawgram\bin\Debug\netcoreapp1.1\Pawgram.runtimeco
 C:\Users\AndersBl\Code\Pawgram\Pawgram\bin\Debug\netcoreapp1.1\Pawgram.runtimeconfig.dev.json
 C:\Users\AndersBl\Code\Pawgram\Pawgram\bin\Debug\netcoreapp1.1\Pawgram.dll
 C:\Users\AndersBl\Code\Pawgram\Pawgram\bin\Debug\netcoreapp1.1\Pawgram.pdb
-C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\Pawgram.csprojResolveAssemblyReference.cache
-C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
 C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\Pawgram.AssemblyInfo.cs
 C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\Pawgram.dll
 C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\Pawgram.pdb
+C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\AndersBl\Code\Pawgram\Pawgram\obj\Debug\netcoreapp1.1\Pawgram.csprojResolveAssemblyReference.cache

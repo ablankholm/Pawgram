@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "74f4cc1f5efa5786873edddc22195c19d6d225eb"
+    "signature": "e6935de273446a4464fbabac53424b31e12e1adc"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.1",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.1.1",
+          "Microsoft.AspNetCore.Authentication.Twitter": "1.1.1",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.1.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.1",
           "Microsoft.AspNetCore.Mvc": "1.1.2",
@@ -151,6 +152,19 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.authentication.twitter/1.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.1",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Twitter.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Twitter.dll": {}
         }
       },
       "microsoft.aspnetcore.authorization/1.1.1": {
@@ -3371,6 +3385,13 @@
       "sha512": "sha512-YNTHmYXQGfuk5/3o0WpcCeZniBfsoVC4QC35ZfxYJ8E/P6OAmZnNc1N860jWl3Aev7Kp5AEbqUlthJS4PtizoA==",
       "path": "microsoft.aspnetcore.authentication.cookies/1.1.1",
       "hashPath": "microsoft.aspnetcore.authentication.cookies.1.1.1.nupkg.sha512"
+    },
+    "microsoft.aspnetcore.authentication.twitter/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KlaCpTWGkvTh+Aw6y4qSNPHroSSRIufYCiuRMIB4rMVeUeBcED7meHquvDECrwNVKZ1ud9XeX/4UwreGXlB+Dw==",
+      "path": "microsoft.aspnetcore.authentication.twitter/1.1.1",
+      "hashPath": "microsoft.aspnetcore.authentication.twitter.1.1.1.nupkg.sha512"
     },
     "microsoft.aspnetcore.authorization/1.1.1": {
       "type": "package",
