@@ -13,6 +13,7 @@ using Pawgram.Data;
 using Pawgram.Models;
 using Pawgram.Services;
 using Microsoft.AspNetCore.Mvc;
+using Discord.OAuth2;
 
 namespace Pawgram
 {
@@ -95,6 +96,33 @@ namespace Pawgram
             {
                 ClientId = Configuration["Authentication:Twitch:ClientId"],
                 ClientSecret = Configuration["Authentication:Twitch:ClientSecret"]
+            });
+            /**
+            OAuthOptions DiscordOAuthOptions = new OAuthOptions()
+            {
+                AuthenticationScheme = "Discord",
+                DisplayName = "Discord",
+                ClaimsIssuer = "Discord",
+
+                CallbackPath = new Microsoft.AspNetCore.Http.PathString("/signin-discord"),
+
+                AuthorizationEndpoint = "https://discordapp.com/api/oauth2/authorize",
+                TokenEndpoint = "https://discordapp.com/api/oauth2/token",
+                UserInformationEndpoint = "https://discordapp.com/api/oauth2/authorize/users/",
+
+                ClientId = Configuration["Authentication:Discord:ClientId"],
+                ClientSecret = Configuration["Authentication:Discord:ClientSecret"]
+            };
+            DiscordOAuthOptions.Scope.Add("identify");
+            DiscordOAuthOptions.Scope.Add("guilds");
+            DiscordOAuthOptions.Scope.Add("email");
+            app.UseOAuthAuthentication(DiscordOAuthOptions);
+            **/
+            app.UseDiscordAuthentication(new DiscordOptions
+            {
+                AppId = Configuration["Authentication:Discord:ClientId"],
+                AppSecret = Configuration["Authentication:Discord:ClientSecret"],
+                Scope = { "identify", "guilds" }
             });
 
             app.UseMvc(routes =>

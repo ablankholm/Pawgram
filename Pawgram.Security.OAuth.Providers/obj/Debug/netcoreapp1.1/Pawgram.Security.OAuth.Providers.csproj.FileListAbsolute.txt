@@ -1,0 +1,4 @@
+C:\Users\AndersBl\Code\Pawgram\Pawgram.Security.OAuth.Providers\bin\Debug\netcoreapp1.1\Pawgram.Security.OAuth.Providers.deps.json
+C:\Users\AndersBl\Code\Pawgram\Pawgram.Security.OAuth.Providers\bin\Debug\netcoreapp1.1\Pawgram.Security.OAuth.Providers.dll
+C:\Users\AndersBl\Code\Pawgram\Pawgram.Security.OAuth.Providers\obj\Debug\netcoreapp1.1\Pawgram.Security.OAuth.Providers.csprojResolveAssemblyReference.cache
+C:\Users\AndersBl\Code\Pawgram\Pawgram.Security.OAuth.Providers\obj\Debug\netcoreapp1.1\Pawgram.Security.OAuth.Providers.AssemblyInfo.cs

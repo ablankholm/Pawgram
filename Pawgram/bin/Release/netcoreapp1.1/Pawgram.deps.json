@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "4028b8c08b7bbf3d02645f7f40d4139569638cb9"
+    "signature": "c5dc9f263d6f44c08bb4bcadb898cbd30df4c39a"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
       "pawgram/1.0.0": {
         "dependencies": {
           "AspNet.Security.OAuth.Twitch": "1.0.0-beta3-final",
+          "Discord.OAuth2": "1.0.0",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.1",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.1.1",
@@ -59,6 +60,17 @@
         },
         "compile": {
           "lib/netstandard1.3/AspNet.Security.OAuth.Twitch.dll": {}
+        }
+      },
+      "discord.oauth2/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Discord.OAuth2.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Discord.OAuth2.dll": {}
         }
       },
       "microsoft.applicationinsights/2.2.0": {
@@ -3613,6 +3625,13 @@
       "sha512": "sha512-hQuO0Jo9dPrJiWhX2z+MK/2GilA2TpuJmoMttHae3VgF+qJiewJthHq/FGDyQ+dm/pQxowieF2hF9Z0HyhR1WQ==",
       "path": "aspnet.security.oauth.twitch/1.0.0-beta3-final",
       "hashPath": "aspnet.security.oauth.twitch.1.0.0-beta3-final.nupkg.sha512"
+    },
+    "discord.oauth2/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mlBeT+qKJp2kvQFpFDTUX65rq8ld3hTYvV74tyEP6Vs6tC8C8QaO5584dcsLDEEHOFfaMe8NZ1rGx1UP1YkpWw==",
+      "path": "discord.oauth2/1.0.0",
+      "hashPath": "discord.oauth2.1.0.0.nupkg.sha512"
     },
     "microsoft.applicationinsights/2.2.0": {
       "type": "package",
