@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "e6935de273446a4464fbabac53424b31e12e1adc"
+    "signature": "f5a769d6d72bde1050ad6351b3ab7846e0d508c4"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.1",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.1.1",
+          "Microsoft.AspNetCore.Authentication.Google": "1.1.1",
           "Microsoft.AspNetCore.Authentication.Twitter": "1.1.1",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.1.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.1.1",
@@ -152,6 +153,32 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Cookies.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.authentication.google/1.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.authentication.oauth/1.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.1",
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
         }
       },
       "microsoft.aspnetcore.authentication.twitter/1.1.1": {
@@ -3385,6 +3412,20 @@
       "sha512": "sha512-YNTHmYXQGfuk5/3o0WpcCeZniBfsoVC4QC35ZfxYJ8E/P6OAmZnNc1N860jWl3Aev7Kp5AEbqUlthJS4PtizoA==",
       "path": "microsoft.aspnetcore.authentication.cookies/1.1.1",
       "hashPath": "microsoft.aspnetcore.authentication.cookies.1.1.1.nupkg.sha512"
+    },
+    "microsoft.aspnetcore.authentication.google/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5bovr3Z/CzLgYqfpUszSA0+SuQ4jiybyE/uaNc69ZThFhzWu1lP0TEkd4ZlbPyq+Qj0fHDOQ/kcEHuts0dYtoQ==",
+      "path": "microsoft.aspnetcore.authentication.google/1.1.1",
+      "hashPath": "microsoft.aspnetcore.authentication.google.1.1.1.nupkg.sha512"
+    },
+    "microsoft.aspnetcore.authentication.oauth/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cS3sVKacQqNO+ZSOa1kVtJy34XCVk5vF6kE7u0Cd1AR/VC7TAjpGeHlBSNzVBfrj/W71ly/MWU4gldQZ3XzsKw==",
+      "path": "microsoft.aspnetcore.authentication.oauth/1.1.1",
+      "hashPath": "microsoft.aspnetcore.authentication.oauth.1.1.1.nupkg.sha512"
     },
     "microsoft.aspnetcore.authentication.twitter/1.1.1": {
       "type": "package",
