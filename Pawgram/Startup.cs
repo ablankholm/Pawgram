@@ -98,6 +98,11 @@ namespace Pawgram
                 ClientId = Configuration["Authentication:Microsoft:ClientId"],
                 ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"]
             });
+            app.UseFacebookAuthentication(new FacebookOptions()
+            {
+                ClientId = Configuration["Authentication:Facebook:ClientId"],
+                ClientSecret = Configuration["Authentication:Facebook:ClientSecret"]
+            });
             app.UseTwitchAuthentication(new TwitchAuthenticationOptions()
             {
                 ClientId = Configuration["Authentication:Twitch:ClientId"],
@@ -109,6 +114,7 @@ namespace Pawgram
                 AppSecret = Configuration["Authentication:Discord:ClientSecret"],
                 Scope = { "identify", "guilds" }
             });
+            
 
             app.UseMvc(routes =>
             {
