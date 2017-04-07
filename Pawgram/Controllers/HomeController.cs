@@ -31,5 +31,19 @@ namespace Pawgram.Controllers
         {
             return View();
         }
+
+        [Route("/Privacy")]
+        [Route("/Privacy-Policy")]
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Route("/ToS")]
+        [Route("/Terms-of-Service")]
+        public IActionResult ToS()
+        {
+            return View();
+        }
     }
 }
