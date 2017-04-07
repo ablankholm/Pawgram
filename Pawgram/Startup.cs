@@ -14,6 +14,7 @@ using Pawgram.Models;
 using Pawgram.Services;
 using Microsoft.AspNetCore.Mvc;
 using Discord.OAuth2;
+using AspNet.Security.OAuth.Twitch;
 
 namespace Pawgram
 {
@@ -81,7 +82,7 @@ namespace Pawgram
 
             app.UseIdentity();
 
-            // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
+            // External authentication middleware (see https://go.microsoft.com/fwlink/?LinkID=532715)
             app.UseTwitterAuthentication(new TwitterOptions()
             {
                 ConsumerKey = Configuration["Authentication:Twitter:ConsumerKey"],
@@ -92,32 +93,16 @@ namespace Pawgram
                 ClientId = Configuration["Authentication:Google:ClientId"],
                 ClientSecret = Configuration["Authentication:Google:ClientSecret"]
             });
-            app.UseTwitchAuthentication(new AspNet.Security.OAuth.Twitch.TwitchAuthenticationOptions()
+            app.UseMicrosoftAccountAuthentication(new MicrosoftAccountOptions()
+            {
+                ClientId = Configuration["Authentication:Microsoft:ClientId"],
+                ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"]
+            });
+            app.UseTwitchAuthentication(new TwitchAuthenticationOptions()
             {
                 ClientId = Configuration["Authentication:Twitch:ClientId"],
                 ClientSecret = Configuration["Authentication:Twitch:ClientSecret"]
             });
-            /**
-            OAuthOptions DiscordOAuthOptions = new OAuthOptions()
-            {
-                AuthenticationScheme = "Discord",
-                DisplayName = "Discord",
-                ClaimsIssuer = "Discord",
-
-                CallbackPath = new Microsoft.AspNetCore.Http.PathString("/signin-discord"),
-
-                AuthorizationEndpoint = "https://discordapp.com/api/oauth2/authorize",
-                TokenEndpoint = "https://discordapp.com/api/oauth2/token",
-                UserInformationEndpoint = "https://discordapp.com/api/oauth2/authorize/users/",
-
-                ClientId = Configuration["Authentication:Discord:ClientId"],
-                ClientSecret = Configuration["Authentication:Discord:ClientSecret"]
-            };
-            DiscordOAuthOptions.Scope.Add("identify");
-            DiscordOAuthOptions.Scope.Add("guilds");
-            DiscordOAuthOptions.Scope.Add("email");
-            app.UseOAuthAuthentication(DiscordOAuthOptions);
-            **/
             app.UseDiscordAuthentication(new DiscordOptions
             {
                 AppId = Configuration["Authentication:Discord:ClientId"],

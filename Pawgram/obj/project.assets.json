@@ -195,6 +195,19 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.MicrosoftAccount/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.1.1",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication.OAuth/1.1.1": {
         "type": "package",
         "dependencies": {
@@ -4458,6 +4471,19 @@
         "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.xml",
         "microsoft.aspnetcore.authentication.google.1.1.1.nupkg.sha512",
         "microsoft.aspnetcore.authentication.google.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.MicrosoftAccount/1.1.1": {
+      "sha512": "F1gDDY1Z793cpUmiD5C08xtIlkcUsjdkW2QaaxJcQS6VwfG6DuoVnvTydPLk8h9soZzb9gbyFa6qWYVgxZU3cg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.microsoftaccount/1.1.1",
+      "files": [
+        "lib/net451/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll",
+        "lib/net451/Microsoft.AspNetCore.Authentication.MicrosoftAccount.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.MicrosoftAccount.xml",
+        "microsoft.aspnetcore.authentication.microsoftaccount.1.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.microsoftaccount.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.OAuth/1.1.1": {
@@ -11113,6 +11139,7 @@
       "Microsoft.AspNetCore >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.Google >= 1.1.1",
+      "Microsoft.AspNetCore.Authentication.MicrosoftAccount >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.Twitter >= 1.1.1",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 1.1.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 1.1.1",
@@ -11188,6 +11215,10 @@
             "version": "1.1.1"
           },
           "Microsoft.AspNetCore.Authentication.Twitter": {
+            "target": "Package",
+            "version": "1.1.1"
+          },
+          "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
             "target": "Package",
             "version": "1.1.1"
           },
