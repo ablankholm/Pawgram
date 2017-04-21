@@ -66,7 +66,7 @@
           }
         }
       },
-      "Microsoft.ApplicationInsights/2.2.0": {
+      "Microsoft.ApplicationInsights/2.3.0-beta3": {
         "type": "package",
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -90,16 +90,16 @@
           "System.Xml.XDocument": "4.0.11"
         },
         "compile": {
-          "lib/netstandard1.5/Microsoft.ApplicationInsights.dll": {}
+          "lib/netstandard1.3/Microsoft.ApplicationInsights.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/Microsoft.ApplicationInsights.dll": {}
+          "lib/netstandard1.3/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.AspNetCore/2.0.0": {
+      "Microsoft.ApplicationInsights.AspNetCore/2.1.0-beta1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0",
+          "Microsoft.ApplicationInsights": "2.3.0-beta3",
           "Microsoft.AspNetCore.Hosting": "1.0.0",
           "Microsoft.Extensions.Configuration": "1.0.0",
           "Microsoft.Extensions.Configuration.Json": "1.0.0",
@@ -4392,10 +4392,10 @@
         "runtimes/win7-x86/native/libuv.dll"
       ]
     },
-    "Microsoft.ApplicationInsights/2.2.0": {
-      "sha512": "+JJ6qygUKQY2YnRfr0GlgdbKAhUqZhwd9zija0aKdDVQK60lQtnsBKzFY8/kMg0SH2MRXtmLkHG53oiNDQsLJQ==",
+    "Microsoft.ApplicationInsights/2.3.0-beta3": {
+      "sha512": "GGA5EXKSZMXKvIvd7BFskJQZFs/rBtiWTldOey3kBUrUZa5VIHBsmlBSjtkElA9uX1Z6NEIsQDopx+z59EFMcw==",
       "type": "package",
-      "path": "microsoft.applicationinsights/2.2.0",
+      "path": "microsoft.applicationinsights/2.3.0-beta3",
       "files": [
         "lib/net40/Microsoft.ApplicationInsights.XML",
         "lib/net40/Microsoft.ApplicationInsights.dll",
@@ -4403,25 +4403,25 @@
         "lib/net45/Microsoft.ApplicationInsights.dll",
         "lib/net46/Microsoft.ApplicationInsights.XML",
         "lib/net46/Microsoft.ApplicationInsights.dll",
-        "lib/netstandard1.5/Microsoft.ApplicationInsights.XML",
-        "lib/netstandard1.5/Microsoft.ApplicationInsights.dll",
+        "lib/netstandard1.3/Microsoft.ApplicationInsights.XML",
+        "lib/netstandard1.3/Microsoft.ApplicationInsights.dll",
         "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll",
         "lib/uap10.0/Microsoft.ApplicationInsights.dll",
         "lib/wp8/Microsoft.ApplicationInsights.dll",
-        "microsoft.applicationinsights.2.2.0.nupkg.sha512",
+        "microsoft.applicationinsights.2.3.0-beta3.nupkg.sha512",
         "microsoft.applicationinsights.nuspec"
       ]
     },
-    "Microsoft.ApplicationInsights.AspNetCore/2.0.0": {
-      "sha512": "LcbwEaO9oA063w5yzxLgkxZkFIF9VCYxG98E2XZ2Ua/Uj2I3WMhyRp/gE7HI9sUapYRT3WCyJ/LYXT69WYrKow==",
+    "Microsoft.ApplicationInsights.AspNetCore/2.1.0-beta1": {
+      "sha512": "SLJBTfYDPPif6Yfpul7/N6hcOx4rO/Y8I6J8xQSGXtSRCc7LXji1dBfASYJOJ06xBbtKbew1sgu4yQmhNzDjFw==",
       "type": "package",
-      "path": "microsoft.applicationinsights.aspnetcore/2.0.0",
+      "path": "microsoft.applicationinsights.aspnetcore/2.1.0-beta1",
       "files": [
         "lib/net451/Microsoft.ApplicationInsights.AspNetCore.dll",
         "lib/net451/Microsoft.ApplicationInsights.AspNetCore.xml",
         "lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.dll",
         "lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.xml",
-        "microsoft.applicationinsights.aspnetcore.2.0.0.nupkg.sha512",
+        "microsoft.applicationinsights.aspnetcore.2.1.0-beta1.nupkg.sha512",
         "microsoft.applicationinsights.aspnetcore.nuspec"
       ]
     },
@@ -11161,7 +11161,7 @@
     ".NETCoreApp,Version=v1.1": [
       "AspNet.Security.OAuth.Twitch >= 1.0.0-beta3-final",
       "Discord.OAuth2 >= 1.0.0",
-      "Microsoft.ApplicationInsights.AspNetCore >= 2.0.0",
+      "Microsoft.ApplicationInsights.AspNetCore >= 2.1.0-beta1",
       "Microsoft.AspNetCore >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.Facebook >= 1.1.1",
@@ -11289,7 +11289,7 @@
           },
           "Microsoft.ApplicationInsights.AspNetCore": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "2.1.0-beta1"
           },
           "AspNet.Security.OAuth.Twitch": {
             "target": "Package",

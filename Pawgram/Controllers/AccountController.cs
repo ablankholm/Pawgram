@@ -112,10 +112,20 @@ namespace Pawgram.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                //@TODO: Find better way of aquiring user name, pref during signup i.e. extend registration form
-                string userName = model.Email;                          //Default to full email
-                userName = model.Email.Split('@').FirstOrDefault();     //Scrub domain
-                var user = new ApplicationUser { UserName = userName, Email = model.Email };
+                string userName = model.Email;
+
+                //Retrieve user nickname
+                string displayName = userName.Split('@').FirstOrDefault(); //Use naive default (email prefix) in case no nickname found when logging in with external providers
+                if (model.Nickname != null)
+                {
+                    displayName = model.Nickname;
+                }
+
+                var user = new ApplicationUser {
+                    UserName = userName,
+                    Email = model.Email,
+                    DisplayName = displayName
+                };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -125,6 +135,10 @@ namespace Pawgram.Controllers
                     //var callbackUrl = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
                     //await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
                     //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
+
+                    //ApplicationUser custom property claims
+                    await _userManager.AddClaimAsync(user, new Claim("DisplayName", user.DisplayName));
+
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation(3, "User created a new account with password.");
                     return RedirectToLocal(returnUrl);

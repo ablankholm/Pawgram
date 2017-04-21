@@ -9,6 +9,11 @@ namespace Pawgram.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(256, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
+        [Display(Name = "Nickname")]
+        public string Nickname { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
